@@ -11,7 +11,7 @@ jobs: # 실제 실행될 내용
     steps:
     - uses: actions/checkout@v4 # checkout
     - name: Set up Python 3.10 
-      uses: actions/setup-python@v4 # setup-python
+      uses: actions/setup-python@v5 # setup-python
       with:
         python-version: "3.10" # 3.10버전 파이썬 사용
     - name: Install dependencies # 1) 스크립트에 필요한 dependency 설치

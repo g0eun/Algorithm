@@ -18,6 +18,7 @@ def main():
     solveds = [];
 
     print(os.path.abspath('.'))
+    print(os.listdir(os.path.abspath('.')))
 
     for root, dirs, files in os.walk("."):
         dirs.sort()

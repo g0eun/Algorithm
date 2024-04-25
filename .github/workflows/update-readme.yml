@@ -37,6 +37,7 @@ jobs:
       run: |
         git config --global user.name 'g0eun' # 유저명
         git config --global user.email 'lgulgu09@gmail.com' # 유저 이메일
+        git branch --set-upstream-to origin/master # 기본 브랜치 설정
         git add -A
         git commit -am "auto update README.md" # 커밋 메시지
     - name: Push changes # 4) 메인에 푸시

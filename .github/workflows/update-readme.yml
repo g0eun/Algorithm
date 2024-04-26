@@ -2,9 +2,13 @@
 name: Update readme
 
 # JOB 실행 조건
+# 대상 brnach, path에 push 발생
 on:
   push:
-    branches: [ "main" ] # main 브랜치에 push가 발생
+    branches: [ "main" ]
+    paths:
+       - '프로그래머스/**'
+       - '백준/**'
   pull_request:
 
 # JOB 정의

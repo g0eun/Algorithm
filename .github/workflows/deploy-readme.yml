@@ -18,7 +18,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        repo-token: ${{ secrets.TOKEN }}
+        submodules: true
+        token: ${{ secrets.TOKEN }}
     - name: Set up Python 3.10 
       uses: actions/setup-python@v5
       with:

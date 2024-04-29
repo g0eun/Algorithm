@@ -17,10 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        repo-token: ${{ secrets.TOKEN }}
     - name: Set up Python 3.10 
       uses: actions/setup-python@v5
       with:
-        token: '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'
         python-version: "3.10"
       # -- 라이브러리 설치 필요한 경우
     - name: Install dependencies

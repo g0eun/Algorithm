@@ -1,5 +1,5 @@
 # GitHub Actions 이름
-name: Update readme
+name: Deploy readme
 
 # JOB 실행 조건
 # 대상 brnach, path에 push 발생
@@ -7,8 +7,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-       - '프로그래머스/**'
-       - '백준/**'
+       - '.github/workflows/**'
   pull_request:
 
 # JOB 정의
@@ -31,6 +30,11 @@ jobs:
 #       python -m pip install --upgrade pip
 #       pip install python-leetcode
 
+    # -- readme 삭제 (재배포 목적)
+    - name: Remove readme
+      run: |
+        git rm README.md
+
     # -- update.py 실행
     - name: Run update.py
       run: |
@@ -42,9 +46,10 @@ jobs:
         git config --global user.name 'g0eun' # 유저명
         git config --global user.email 'lgulgu09@gmail.com' # 유저 이메일
         git add -A
-        git commit -am "auto update README.md" # 커밋 메시지
+        git commit -am "auto deploy README.md" # 커밋 메시지
 
     # -- 메인에 푸시
     - name: Push changes
       run: |
         git push
+

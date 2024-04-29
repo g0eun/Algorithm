@@ -134,7 +134,7 @@ class Editor():
 
 def main():
 
-    root = 'C:/Users/User/Documents/테스트 코드/algorithm'
+    root = '/home/runner/work/Algorithm/Algorithm'
 
     # 편집기 생성
     editor = Editor(root)

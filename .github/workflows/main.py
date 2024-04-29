@@ -52,7 +52,7 @@ class Editor():
             response = requests.get(f"https://www.acmicpc.net/problem/{num}", headers=headers).text
             response_data = response[response.find('<tbody>'):response.find('</tbody>')]
             acceptance_rate = response_data[response_data.rfind('<td>'):response_data.rfind('</td>')][len('<td>'):]
-            acceptance_rate = f"{round(float(acceptance_rate.split('%')[0]))}%"
+            # acceptance_rate = f"{round(float(acceptance_rate.split('%')[0]))}%"
 
 
         return [create_time, title, level_info, acceptance_rate]

@@ -1,25 +1,23 @@
-# 
-# 백준 & 프로그래머스 문제 풀이 목록
+#
+# Algorithm Practice
 
-프로그래머스의 경우, 푼 문제 목록에 대한 마이그레이션이 필요합니다.
+- 알고리즘 풀이 내역 관리
+- 정답 제출 시, [자동 업데이트](https://github.com/g0eun/Algorithm/tree/main/.github/workflows)
 
-## 📚 백준
-### 🚀 Bronze
-| 문제번호 | 링크 |
-| ----- | ----- |
-|15953. 상금 헌터|[링크](./%EB%B0%B1%EC%A4%80/Bronze/15953.%E2%80%85%EC%83%81%EA%B8%88%E2%80%85%ED%97%8C%ED%84%B0/README.md)|
+
+
 ## 📚 프로그래머스
-### 🚀 1
-| 문제번호 | 링크 |
-| ----- | ----- |
-|150370. 개인정보 수집 유효기간|[링크](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/150370.%E2%80%85%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%E2%80%85%EC%88%98%EC%A7%91%E2%80%85%EC%9C%A0%ED%9A%A8%EA%B8%B0%EA%B0%84/README.md)|
-|250121. ［PCCE 기출문제］ 10번 ／ 데이터 분석|[링크](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/250121.%E2%80%85%EF%BC%BBPCCE%E2%80%85%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C%EF%BC%BD%E2%80%8510%EB%B2%88%E2%80%85%EF%BC%8F%E2%80%85%EB%8D%B0%EC%9D%B4%ED%84%B0%E2%80%85%EB%B6%84%EC%84%9D/README.md)|
-|250125. ［PCCE 기출문제］ 9번 ／ 이웃한 칸|[링크](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/250125.%E2%80%85%EF%BC%BBPCCE%E2%80%85%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C%EF%BC%BD%E2%80%859%EB%B2%88%E2%80%85%EF%BC%8F%E2%80%85%EC%9D%B4%EC%9B%83%ED%95%9C%E2%80%85%EC%B9%B8/README.md)|
-|250137. ［PCCP 기출문제］ 1번 ／ 붕대 감기|[링크](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/250137.%E2%80%85%EF%BC%BBPCCP%E2%80%85%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C%EF%BC%BD%E2%80%851%EB%B2%88%E2%80%85%EF%BC%8F%E2%80%85%EB%B6%95%EB%8C%80%E2%80%85%EA%B0%90%EA%B8%B0/README.md)|
-|258712. 가장 많이 받은 선물|[링크](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/258712.%E2%80%85%EA%B0%80%EC%9E%A5%E2%80%85%EB%A7%8E%EC%9D%B4%E2%80%85%EB%B0%9B%EC%9D%80%E2%80%85%EC%84%A0%EB%AC%BC/README.md)|
-|92334. 신고 결과 받기|[링크](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/92334.%E2%80%85%EC%8B%A0%EA%B3%A0%E2%80%85%EA%B2%B0%EA%B3%BC%E2%80%85%EB%B0%9B%EA%B8%B0/README.md)|
-### 🚀 2
-| 문제번호 | 링크 |
-| ----- | ----- |
-|12981. 영어 끝말잇기|[링크](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12981.%E2%80%85%EC%98%81%EC%96%B4%E2%80%85%EB%81%9D%EB%A7%90%EC%9E%87%EA%B8%B0/README.md)|
-|60057. 문자열 압축|[링크](./%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/60057.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4%E2%80%85%EC%95%95%EC%B6%95/README.md)|
+| 날짜 | 제목 | 난이도 | 정답률 |
+| :-----: | ----- | :-----: | :-----: |
+|2024-04-30|［PCCE 기출문제］ 10번 ／ 데이터 분석|<span style="color:DeepSkyBlue"> __Lv. 1__ </span>|50%|
+|2024-04-30|개인정보 수집 유효기간|<span style="color:DeepSkyBlue"> __Lv. 1__ </span>|44%|
+|2024-04-30|영어 끝말잇기|<span style="color:green"> __Lv. 2__ </span>|69%|
+|2024-04-30|문자열 압축|<span style="color:green"> __Lv. 2__ </span>|43%|
+|2024-04-30|신고 결과 받기|<span style="color:DeepSkyBlue"> __Lv. 1__ </span>|38%|
+|2024-04-30|［PCCP 기출문제］ 1번 ／ 붕대 감기|<span style="color:DeepSkyBlue"> __Lv. 1__ </span>|34%|
+|2024-04-30|［PCCE 기출문제］ 9번 ／ 이웃한 칸|<span style="color:DeepSkyBlue"> __Lv. 1__ </span>|55%|
+|2024-04-30|가장 많이 받은 선물|<span style="color:DeepSkyBlue"> __Lv. 1__ </span>|23%|
+## 📚 백준
+| 날짜 | 제목 | 난이도 | 정답률 |
+| :-----: | ----- | :-----: | :-----: |
+|2024-04-30|상금 헌터|![B3](./resources/img/B3.svg)||

@@ -73,7 +73,7 @@ class Editor():
 
         for source in source_list:
             if source in os.listdir(root):
-                content = "## 📚 {}\n".format(source)
+                content = "\n## 📚 {}\n".format(source)
                 content += "| 날짜 | 제목 | 난이도 | 정답률 |\n"
                 content += "| :-----: | ----- | :-----: | :-----: |\n"
 

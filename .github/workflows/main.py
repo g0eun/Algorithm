@@ -91,7 +91,7 @@ class Editor():
 
                 content_data.update({source: content})
 
-        with open(f"{exec_path}/resources/content_data.pickle", "wb") as f:
+        with open(f"{root}/content_data.pickle", "wb") as f:
             pickle.dump(content_data, f)
 
         return content_data
@@ -102,7 +102,7 @@ class Editor():
         source_list = self.source_list
         exec_path = self.exec_path
 
-        with open(f"{exec_path}/resources/content_data.pickle" "rb") as f:
+        with open(f"{root}/resources/content_data.pickle" "rb") as f:
             content_data = pickle.load(f)
 
         for source in source_list:
@@ -126,7 +126,7 @@ class Editor():
 
         content_data[upd_source] += f"|{'|'.join(upd_data)}|\n"
 
-        with open(f"{exec_path}/resources/content_data.pickle", "wb") as f:
+        with open(f"{root}/resources/content_data.pickle", "wb") as f:
             pickle.dump(content_data, f)
 
         return content_data

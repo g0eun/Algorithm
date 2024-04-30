@@ -15,6 +15,8 @@ class Editor():
 
     def get_data(self, path):
         root = self.root
+        exec_path = self.exec_path
+
         path = path.replace(f"{root}/","")
         source, level, title = path.split("/")
 
@@ -24,8 +26,9 @@ class Editor():
 
         if source == "프로그래머스":
             # 레벨 (1, ..., 5)
-            level_color = {"0":"blue", "1":"DeepSkyBlue", "2":"green", "3":"yellow", "4":"red", "5":"blueviolet"}
-            level_info = f'<span style="color:{level_color[level]}"> __Lv. {level}__ </span>'
+            # 출력 예시 : '${\textsf{\color{green}Lv. 2}}$'
+            level_color = {"0":"blue", "1":"skyblue", "2":"green", "3":"yellow", "4":"red", "5":"blueviolet"}
+            level_info = "${\textsf{\color{" + level_color[level] + "}Lv. " + level + "}}$"
 
 
             # 정답률
@@ -45,11 +48,12 @@ class Editor():
             else:
                 level_num = level_detail[1].count("I")
             level = f"{level[0]}{level_num}"
-            level_info = f"![{level}](./resources/img/{level}.svg)"
+            level_info = f"![{level}]({exec_path}/resources/img/{level}.svg)"
 
             # 정답률
             headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50", }
             response = requests.get(f"https://www.acmicpc.net/problem/{num}", headers=headers).text
+            print(response)
             response_data = response[response.find('<tbody>'):response.find('</tbody>')]
             acceptance_rate = response_data[response_data.rfind('<td>'):response_data.rfind('</td>')][len('<td>'):]
             # acceptance_rate = f"{round(float(acceptance_rate.split('%')[0]))}%"

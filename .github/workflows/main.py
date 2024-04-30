@@ -9,7 +9,7 @@ import pickle
 class Editor():
     def __init__(self, root):
         self.root = root
-        self.exec_path = f"{self.root}/.github/workflows"
+        self.exec_path = "./.github/workflows"
         self.source_list = ['프로그래머스', '백준']
 
 
@@ -28,7 +28,7 @@ class Editor():
             # 레벨 (1, ..., 5)
             # 출력 예시 : '${\textsf{\color{green}Lv. 2}}$'
             level_color = {"0":"blue", "1":"skyblue", "2":"green", "3":"yellow", "4":"red", "5":"blueviolet"}
-            level_info = "${\textsf{\color{" + level_color[level] + "}Lv. " + level + "}}$"
+            level_info = '${' +'\\textsf{\color{' + level_color[level] + "}Lv. " + level + "}}$"
 
 
             # 정답률
@@ -56,7 +56,7 @@ class Editor():
             print(response)
             response_data = response[response.find('<tbody>'):response.find('</tbody>')]
             acceptance_rate = response_data[response_data.rfind('<td>'):response_data.rfind('</td>')][len('<td>'):]
-            # acceptance_rate = f"{round(float(acceptance_rate.split('%')[0]))}%"
+            acceptance_rate = f"{round(float(acceptance_rate.split('%')[0]))}%"
 
 
         return [create_time, title, level_info, acceptance_rate]
@@ -65,7 +65,6 @@ class Editor():
 
         root = self.root
         source_list = self.source_list
-        exec_path = self.exec_path
 
         content_data = {}
 
@@ -104,7 +103,6 @@ class Editor():
 
         root = self.root
         source_list = self.source_list
-        exec_path = self.exec_path
 
         with open(f"{root}/resources/content_data.pickle" "rb") as f:
             content_data = pickle.load(f)

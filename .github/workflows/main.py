@@ -56,7 +56,10 @@ class Editor():
             print(response)
             response_data = response[response.find('<tbody>'):response.find('</tbody>')]
             acceptance_rate = response_data[response_data.rfind('<td>'):response_data.rfind('</td>')][len('<td>'):]
-            acceptance_rate = f"{round(float(acceptance_rate.split('%')[0]))}%"
+            try:
+                acceptance_rate = f"{round(float(acceptance_rate.split('%')[0]))}%"
+            except:
+                pass
 
 
         return [create_time, title, level_info, acceptance_rate]

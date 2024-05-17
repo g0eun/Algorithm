@@ -23,6 +23,7 @@ class Editor():
         create_time = os.path.getctime(path)
         num =  title.split('.')[0].strip()
         title = title.split('.')[1].strip()
+        title_info = f"[{title}](https://github.com/g0eun/Algorithm/tree/main/{parse.quote(path)})"
 
         if source == "프로그래머스":
             # 레벨 (1, ..., 5)
@@ -62,7 +63,7 @@ class Editor():
                 pass
 
 
-        return [create_time, title, level_info, acceptance_rate]
+        return [create_time, title_info, level_info, acceptance_rate]
 
     def make_context(self):
 
@@ -97,7 +98,7 @@ class Editor():
 
                 content_data.update({source: content})
 
-        with open(f"{root}/content_data.pickle", "wb") as f:
+        with open(f"{root}/readmeData.pickle", "wb") as f:
             pickle.dump(content_data, f)
 
         return content_data
@@ -107,7 +108,7 @@ class Editor():
         root = self.root
         source_list = self.source_list
 
-        with open(f"{root}/resources/content_data.pickle" "rb") as f:
+        with open(f"{root}/readmeData.pickle" "rb") as f:
             content_data = pickle.load(f)
 
         for source in source_list:
@@ -131,7 +132,7 @@ class Editor():
 
         content_data[upd_source] += f"|{'|'.join(upd_data)}|\n"
 
-        with open(f"{root}/resources/content_data.pickle", "wb") as f:
+        with open(f"{root}/readmeData.pickle", "wb") as f:
             pickle.dump(content_data, f)
 
         return content_data

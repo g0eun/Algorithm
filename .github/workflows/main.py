@@ -4,7 +4,7 @@ from urllib import parse
 import requests
 import json
 import re
-import time
+from datetime import datetime, timedelta
 import pickle
 
 class Editor():
@@ -93,7 +93,7 @@ class Editor():
 
                 # 시간 형식 변경
                 for d in data:
-                    d[0] = time.strftime('%Y-%m-%d', time.localtime(d[0]))
+                    d[0] = (datetime.utcfromtimestamp(d[0]) + timedelta(hours=9)).strftime("'%Y-%m-%d")
 
                 # 마크다운 데이터 타입 생성
                 data = [f"|{'|'.join(d)}|\n" for d in data]
@@ -138,7 +138,7 @@ class Editor():
 
             # 문제 정보 수집
             upd_data = self.get_data(f"{root}/{upd_source}/{upd_level}/{upd_problem}")
-            upd_data[0] = time.strftime('%Y-%m-%d', time.localtime(upd_data[0]))
+            upd_data[0] = (datetime.utcfromtimestamp(upd_data[0]) + timedelta(hours=9)).strftime("'%Y-%m-%d")
 
             # 문제 풀이 내역 중복 확인
             upd_content = f"|{'|'.join(upd_data)}|\n"
@@ -187,7 +187,7 @@ def main():
     # 배포 정보 추가
     context += f"""
 ##
-Latest Release : {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))}"""
+Latest Release : {(datetime.utcnow()+ timedelta(hours=9)).strftime('%Y-%m-%d %H:%M:%S')}"""
 
 
     # 작성 파일 저장

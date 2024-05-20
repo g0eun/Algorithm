@@ -67,7 +67,6 @@ class Editor():
                 print(response)
                 pass
 
-
         return [create_time, title_info, level_info, acceptance_rate]
 
     def make_context(self):
@@ -184,6 +183,13 @@ def main():
     for source in content_data.keys():
         context += content_data[source]
 
+
+    # 배포 정보 추가
+    release_info = '${\\textsf{\color{lightgrey}' + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())) + "}}$"
+    context += f"""<br/><br/>{release_info}"""
+
+
+    # 작성 파일 저장
     with open(f"{root}/README.md", "w", encoding="UTF-8") as fd:
         fd.write(context)
 

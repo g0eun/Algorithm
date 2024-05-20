@@ -22,10 +22,10 @@ class Editor():
         path = path.replace(f"{root}/","")
         source, level, title = path.split("/")
 
-        # create_time = os.path.getctime(path)
-        repo = git.Repo(root)
-        commit = next(repo.iter_commits(paths=path, max_count=1))
-        create_time = commit.committed_date
+        create_time = os.path.getctime(path)
+        # repo = git.Repo(root)
+        # commit = next(repo.iter_commits(paths=path, max_count=1))
+        # create_time = commit.committed_date
         num =  title.split('.')[0].strip()
         title = title.split('.')[1].strip()
         title_info = f"[{title}](https://github.com/g0eun/Algorithm/tree/main/{parse.quote(path)})"

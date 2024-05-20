@@ -111,39 +111,43 @@ class Editor():
     def update_context(self):
 
         root = self.root
-        source_list = self.source_list
 
-        with open(f"{root}/readmeData.pickle" "rb") as f:
+        with open(f"{root}/readmeData.pickle", "rb") as f:
             content_data = pickle.load(f)
 
+        # Commit 이력
         repo = git.Repo(root)
+        commits_list = list(repo.iter_commits())
 
-        source_commit = {}
-        for source in source_list:
-            commit = next(repo.iter_commits(paths=f"{source}", max_count=1))
-            source_commit.update({commit.committed_date : source})
-        upd_source = source_commit[max(source_commit.keys())]
+        # 최신 변경 파일
+        changed_files = []
 
-        level_commit = {}
-        for level in os.listdir(f"{root}/{upd_source}"):
-            commit = next(repo.iter_commits(paths=f"{upd_source}/{level}", max_count=1))
-            level_commit.update({commit.committed_date : level})
-        upd_level = level_commit[max(level_commit.keys())]
+        for x in commits_list[0].diff(commits_list[0].parents[0]):
+            if x.a_blob.path not in changed_files:
+                changed_files.append(x.a_blob.path)
 
-        problem_commit = {}
-        for problem in os.listdir(f"{root}/{upd_source}/{upd_level}"):
-            commit = next(repo.iter_commits(paths=f"{upd_source}/{upd_level}/{problem}", max_count=1))
-            problem_commit.update({commit.committed_date : problem})
-        upd_problem = problem_commit[max(problem_commit.keys())]
+            if x.b_blob is not None and x.b_blob.path not in changed_files:
+                changed_files.append(x.b_blob.path)
 
+        # 문제 풀이 경로 정상 업로드 확인(README.md, *.py)
+        if [file.split(".")[-1] for file in changed_files] == ['md', 'py']:
 
-        upd_data = self.get_data(f"{root}/{upd_source}/{upd_level}/{upd_problem}")
-        upd_data[0] = time.strftime('%Y-%m-%d', time.localtime(upd_data[0]))
+            # 신규 경로 추출
+            upd_source = changed_files[0].split("/")[0]
+            upd_level = changed_files[0].split("/")[1]
+            upd_problem = changed_files[0].split("/")[2]
 
-        content_data[upd_source] += f"|{'|'.join(upd_data)}|\n"
+            # 문제 정보 수집
+            upd_data = self.get_data(f"{root}/{upd_source}/{upd_level}/{upd_problem}")
+            upd_data[0] = time.strftime('%Y-%m-%d', time.localtime(upd_data[0]))
 
-        with open(f"{root}/readmeData.pickle", "wb") as f:
-            pickle.dump(content_data, f)
+            # 문제 풀이 내역 중복 확인
+            upd_content = f"|{'|'.join(upd_data)}|\n"
+            if upd_content not in content_data[upd_source]:
+                content_data[upd_source] += upd_content
+
+                with open(f"{root}/readmeData.pickle", "wb") as f:
+                    pickle.dump(content_data, f)
 
         return content_data
 

@@ -22,10 +22,9 @@ class Editor():
         path = path.replace(f"{root}/","")
         source, level, title = path.split("/")
 
-        create_time = os.path.getctime(path)
-        # repo = git.Repo(root)
-        # commit = next(repo.iter_commits(paths=path, max_count=1))
-        # create_time = commit.committed_date
+        repo = git.Repo(root)
+        commit = next(repo.iter_commits(paths=path, max_count=1))
+        create_time = commit.committed_date
         num =  title.split('.')[0].strip()
         title = title.split('.')[1].strip()
         title_info = f"[{title}](https://github.com/g0eun/Algorithm/tree/main/{parse.quote(path)})"
@@ -59,12 +58,13 @@ class Editor():
             # 정답률
             headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.50", }
             response = requests.get(f"https://www.acmicpc.net/problem/{num}", headers=headers).text
-            print(response)
             response_data = response[response.find('<tbody>'):response.find('</tbody>')]
             acceptance_rate = response_data[response_data.rfind('<td>'):response_data.rfind('</td>')][len('<td>'):]
             try:
                 acceptance_rate = f"{round(float(acceptance_rate.split('%')[0]))}%"
             except:
+                # 오류 확인용
+                print(response)
                 pass
 
 
@@ -116,21 +116,26 @@ class Editor():
         with open(f"{root}/readmeData.pickle" "rb") as f:
             content_data = pickle.load(f)
 
+        repo = git.Repo(root)
+
+        source_commit = {}
         for source in source_list:
-            file_time = 0
-            if source in os.listdir(root):
-                if file_time < os.path.getmtime(f"{root}/{source}"):
-                    upd_source = source
+            commit = next(repo.iter_commits(paths=f"{source}", max_count=1))
+            source_commit.update({commit.committed_date : source})
+        upd_source = source_commit[max(source_commit.keys())]
 
+        level_commit = {}
         for level in os.listdir(f"{root}/{upd_source}"):
-            file_time = 0
-            if file_time < os.path.getmtime(f"{root}/{upd_source}/{level}"):
-                upd_level = level
+            commit = next(repo.iter_commits(paths=f"{upd_source}/{level}", max_count=1))
+            level_commit.update({commit.committed_date : level})
+        upd_level = level_commit[max(level_commit.keys())]
 
+        problem_commit = {}
         for problem in os.listdir(f"{root}/{upd_source}/{upd_level}"):
-            file_time = 0
-            if file_time < os.path.getmtime(f"{root}/{upd_source}/{upd_level}/{problem}"):
-                upd_problem = problem
+            commit = next(repo.iter_commits(paths=f"{upd_source}/{upd_level}/{problem}", max_count=1))
+            problem_commit.update({commit.committed_date : problem})
+        upd_problem = problem_commit[max(problem_commit.keys())]
+
 
         upd_data = self.get_data(f"{root}/{upd_source}/{upd_level}/{upd_problem}")
         upd_data[0] = time.strftime('%Y-%m-%d', time.localtime(upd_data[0]))
@@ -164,8 +169,9 @@ def main():
     context = """#
 # Algorithm Practice
 
-- 알고리즘 풀이 내역 관리
-- 정답 제출 시, [자동 업데이트](https://github.com/g0eun/Algorithm/tree/main/.github/workflows)
+- 알고리즘 풀이 내역 업데이트
+- 정답 제출 시, GitHub Actions를 통해 자동 배포
+- 관련 사항은 워크플로우를 통해 관리  [.github/workflows](https://github.com/g0eun/Algorithm/tree/main/.github/workflows)
 
 
 

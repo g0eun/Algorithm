@@ -8,6 +8,17 @@
 
 
 
+## 📌 Github Actions 유의사항
+
+- 작업 수행을 위해, Workflow permissions 권한 필요
+- Commit 이력 전체 확인을 위해 추가 옵션 설정 (기본값은 최신 1건만 포함)
+```
+- uses: actions/checkout@v4
+  with:
+    fetch-depth: 0
+```
+
+
 ##  📌  프로젝트 구조
 ```
 ├─.github
@@ -27,11 +38,10 @@
 │
 ├─README.md
 └─readmeData.pickle
-    
 ```
 
-- `deploy-readme.yml` : 프로젝트 워크플로우 정의 (1)
-- `update-readme.yml` : 프로젝트 워크플로우 정의 (2)  
+- `deploy-readme.yml` : 프로젝트 Workflow (1)
+- `update-readme.yml` : 프로젝트 Workflow (2)  
 - `main.py` : 프로젝트 실행 파일
 - `README.md` : 결과 파일
 - `readmeData.pickle` : README 데이터 관리
@@ -48,7 +58,3 @@
 * `update-readme.yml` 정의
 * 문제 풀이 경로 **push** 발생 시, `README` 업데이트
 * 과거 이력은 `readmeData.pickle` 통해 호출하며, 신규 추가된 항목에 대해 데이터 수집
-
-✔ 유의사항
-
-Github Actions 수행을 위해, Workflow permissions 설정 필요

@@ -26,3 +26,9 @@ commit = g.iter_commits()
 repo = git.Repo("./")
 t = repo.head.commit.tree()
 repo.git.diff(t)
+
+print(repo.git.diff(repo.commit()))
+
+diff = repo.git.diff(repo.commit()).split("")
+
+diff_output = repo.git.diff("./")

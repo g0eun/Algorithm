@@ -24,4 +24,6 @@
 | 날짜 | 제목 | 난이도 | 정답률 |
 | :-----: | ----- | :-----: | :-----: |
 |2024-04-24|[상금 헌터](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Bronze/15953.%E2%80%85%EC%83%81%EA%B8%88%E2%80%85%ED%97%8C%ED%84%B0)|![B3](./.github/workflows/resources/img/B3.svg)|37%|
-<br/><br/>${\textsf{\color{lightgrey}2024-05-20 07:36:18}}$
+
+##
+${\textsf{\color{lightgrey}Latest Release : 2024-05-20 07:39:46}}$

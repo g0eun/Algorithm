@@ -185,8 +185,10 @@ def main():
 
 
     # 배포 정보 추가
-    release_info = '${\\textsf{\color{lightgrey}' + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())) + "}}$"
-    context += f"""<br/><br/>{release_info}"""
+    release_info = '${\\textsf{\color{lightgrey}' + f"Latest Release : {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))}" + "}}$"
+    context += f"""
+##
+{release_info}"""
 
 
     # 작성 파일 저장

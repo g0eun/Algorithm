@@ -19,6 +19,7 @@
 |2024-04-08|[문자열 압축](https://github.com/g0eun/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/60057.%E2%80%85%EB%AC%B8%EC%9E%90%EC%97%B4%E2%80%85%EC%95%95%EC%B6%95)|${\textsf{\color{green}Lv. 2}}$|43%|
 |2024-04-08|[신고 결과 받기](https://github.com/g0eun/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/1/92334.%E2%80%85%EC%8B%A0%EA%B3%A0%E2%80%85%EA%B2%B0%EA%B3%BC%E2%80%85%EB%B0%9B%EA%B8%B0)|${\textsf{\color{skyblue}Lv. 1}}$|38%|
 |2024-04-08|[영어 끝말잇기](https://github.com/g0eun/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12981.%E2%80%85%EC%98%81%EC%96%B4%E2%80%85%EB%81%9D%EB%A7%90%EC%9E%87%EA%B8%B0)|${\textsf{\color{green}Lv. 2}}$|69%|
+|2024-05-21|[택배 배달과 수거하기](https://github.com/g0eun/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/150369.%E2%80%85%ED%83%9D%EB%B0%B0%E2%80%85%EB%B0%B0%EB%8B%AC%EA%B3%BC%E2%80%85%EC%88%98%EA%B1%B0%ED%95%98%EA%B8%B0)|${\textsf{\color{green}Lv. 2}}$|33%|
 
 ## 📚 백준
 | 날짜 | 제목 | 난이도 | 정답률 |
@@ -26,4 +27,4 @@
 |2024-04-25|[상금 헌터](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Bronze/15953.%E2%80%85%EC%83%81%EA%B8%88%E2%80%85%ED%97%8C%ED%84%B0)|![B3](./.github/workflows/resources/img/B3.svg)|37%|
 
 ##
-Latest Release : 2024-05-20 17:07:18
+Latest Release : 2024-05-21 14:15:00

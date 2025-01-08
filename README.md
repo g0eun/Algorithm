@@ -28,4 +28,4 @@
 |2024-04-25|[상금 헌터](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Bronze/15953.%E2%80%85%EC%83%81%EA%B8%88%E2%80%85%ED%97%8C%ED%84%B0)|![B3](./.github/workflows/resources/img/B3.svg)|37%|
 
 ##
-Latest Release : 2024-05-23 10:28:41
+Latest Release : 2025-01-08 09:51:56

@@ -27,6 +27,7 @@
 | :-----: | ----- | :-----: | :-----: |
 |2024-04-25|[상금 헌터](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Bronze/15953.%E2%80%85%EC%83%81%EA%B8%88%E2%80%85%ED%97%8C%ED%84%B0)|![B3](./.github/workflows/resources/img/B3.svg)|37%|
 |2025-01-08|[회의실 배정](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/1931.%E2%80%85%ED%9A%8C%EC%9D%98%EC%8B%A4%E2%80%85%EB%B0%B0%EC%A0%95)|![G5](./.github/workflows/resources/img/G5.svg)|31%|
+|2025-01-09|[카드 정렬하기](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/1715.%E2%80%85%EC%B9%B4%EB%93%9C%E2%80%85%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0)|![G4](./.github/workflows/resources/img/G4.svg)|35%|
 
 ##
-Latest Release : 2025-01-08 16:34:12
+Latest Release : 2025-01-09 15:14:32

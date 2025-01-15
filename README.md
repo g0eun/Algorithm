@@ -21,6 +21,7 @@
 |2024-04-08|[영어 끝말잇기](https://github.com/g0eun/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/12981.%E2%80%85%EC%98%81%EC%96%B4%E2%80%85%EB%81%9D%EB%A7%90%EC%9E%87%EA%B8%B0)|${\textsf{\color{green}Lv. 2}}$|69%|
 |2024-05-21|[택배 배달과 수거하기](https://github.com/g0eun/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/150369.%E2%80%85%ED%83%9D%EB%B0%B0%E2%80%85%EB%B0%B0%EB%8B%AC%EA%B3%BC%E2%80%85%EC%88%98%EA%B1%B0%ED%95%98%EA%B8%B0)|${\textsf{\color{green}Lv. 2}}$|33%|
 |2024-05-23|[조이스틱](https://github.com/g0eun/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/2/42860.%E2%80%85%EC%A1%B0%EC%9D%B4%EC%8A%A4%ED%8B%B1)|${\textsf{\color{green}Lv. 2}}$|36%|
+|2025-01-15|[가사 검색](https://github.com/g0eun/Algorithm/tree/main/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4/4/60060.%E2%80%85%EA%B0%80%EC%82%AC%E2%80%85%EA%B2%80%EC%83%89)|${\textsf{\color{red}Lv. 4}}$|27%|
 
 ## 📚 백준
 | 날짜 | 제목 | 난이도 | 정답률 |
@@ -32,4 +33,4 @@
 |2025-01-14|[타임머신](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/11657.%E2%80%85%ED%83%80%EC%9E%84%EB%A8%B8%EC%8B%A0)|![G4](./.github/workflows/resources/img/G4.svg)|26%|
 
 ##
-Latest Release : 2025-01-14 10:46:24
+Latest Release : 2025-01-15 10:30:02

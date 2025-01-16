@@ -31,6 +31,7 @@
 |2025-01-09|[카드 정렬하기](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/1715.%E2%80%85%EC%B9%B4%EB%93%9C%E2%80%85%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0)|![G4](./.github/workflows/resources/img/G4.svg)|35%|
 |2025-01-09|[단어 수학](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/1339.%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EC%88%98%ED%95%99)|![G4](./.github/workflows/resources/img/G4.svg)|46%|
 |2025-01-14|[타임머신](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/11657.%E2%80%85%ED%83%80%EC%9E%84%EB%A8%B8%EC%8B%A0)|![G4](./.github/workflows/resources/img/G4.svg)|26%|
+|2025-01-16|[좋다](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/1253.%E2%80%85%EC%A2%8B%EB%8B%A4)|![G4](./.github/workflows/resources/img/G4.svg)|24%|
 
 ##
-Latest Release : 2025-01-15 10:30:02
+Latest Release : 2025-01-16 14:51:58

@@ -32,6 +32,7 @@
 |2025-01-09|[단어 수학](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/1339.%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EC%88%98%ED%95%99)|![G4](./.github/workflows/resources/img/G4.svg)|46%|
 |2025-01-14|[타임머신](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/11657.%E2%80%85%ED%83%80%EC%9E%84%EB%A8%B8%EC%8B%A0)|![G4](./.github/workflows/resources/img/G4.svg)|26%|
 |2025-01-16|[좋다](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/1253.%E2%80%85%EC%A2%8B%EB%8B%A4)|![G4](./.github/workflows/resources/img/G4.svg)|24%|
+|2025-01-21|[특정한 최단 경로](https://github.com/g0eun/Algorithm/tree/main/%EB%B0%B1%EC%A4%80/Gold/1504.%E2%80%85%ED%8A%B9%EC%A0%95%ED%95%9C%E2%80%85%EC%B5%9C%EB%8B%A8%E2%80%85%EA%B2%BD%EB%A1%9C)|![G4](./.github/workflows/resources/img/G4.svg)|25%|
 
 ##
-Latest Release : 2025-01-16 14:51:58
+Latest Release : 2025-01-21 10:17:13
